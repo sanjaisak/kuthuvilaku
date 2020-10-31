@@ -1,0 +1,186 @@
+
+<html lang="en">
+
+<head>
+ 
+ 
+
+  <title>EIE</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+
+
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+ <style>
+   
+ </style>
+<style>
+  body{
+    background: url('background-design-with-mandalas-in-brown-color-vector.jpg') no-repeat;
+    background-size: cover;
+    font-family:'Courier New', Courier, monospace;
+font-style: normal;
+font-weight: 100;
+      }
+      .back{
+      background: rgba(255, 255, 255, 0);
+      border-radius: 20px;
+ 
+      }
+       img{
+        margin-bottom: -60px;
+      }
+      
+.box{
+  width: 80%; margin: auto;
+  background: linear-gradient(60deg, #aa4206 10%, #ad460afd 60%);
+  border-radius: 20px;
+}
+hr{
+  border-style: solid;
+height: 110px;
+color: rgb(128, 69, 10);
+background-color: #b95606;
+}
+.fir{
+  display: none;
+}
+</style>
+
+
+ 
+
+</head>
+
+<body>
+  <div style="padding-top: 40vh;">
+  <div class="box" > 
+ <center> <h1 style="font-size: 75px; font-weight: 800;color: rgba(255, 255, 255, 0.959);"><\>	EIE INAUGURATION  <\></h1></center>
+  </div>
+<div style="padding-top: 10%">
+<div class="row">
+  <div class="col-lg-3">
+    <center>
+      <div >
+      <div class="back1">
+    <img  id="as" class="nofir" src="Webp.net-resizeimage (6).png" > 
+    <img id="As" class="fir"" src="Webp.net-resizeimage.png" > 
+      </div>
+    </div>
+  </center>
+  </div>
+  <div class="col-lg-3">
+    <center>
+      <div >
+      <div class="back">
+        <img id="bs"  class="nofir" src="Webp.net-resizeimage (6).png" > 
+        <img id="Bs"  class="fir"" src="Webp.net-resizeimage.png" > 
+      </div>
+    </div>
+  </center>
+  </div>
+  <div class="col-lg-3">
+    <center>
+      <div >
+      <div class="back1">
+        <img id="cs"  class="nofir" src="Webp.net-resizeimage (6).png" > 
+        <img id="Cs"  class="fir"" src="Webp.net-resizeimage.png" > 
+      </div>
+    </div>
+  </center>
+  </div>
+  <div class="col-lg-3">
+    <center>
+      <div >
+      <div class="back">
+        <img id="ds"  class="nofir" src="Webp.net-resizeimage (6).png" > 
+    <img  id="Ds" class="fir"" src="Webp.net-resizeimage.png" > 
+      </div>
+    </div>
+  </center>
+  </div>
+
+
+</div>
+ <hr>
+</div>
+</div>
+<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-analytics.js"></script>
+
+<script>
+var database;
+
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAtPLfp0FbgCCoxRKOJA9-bGe5DPFGcTFo",
+    authDomain: "kuthuvilaku-6cc9d.firebaseapp.com",
+    databaseURL: "https://kuthuvilaku-6cc9d.firebaseio.com",
+    projectId: "kuthuvilaku-6cc9d",
+    storageBucket: "kuthuvilaku-6cc9d.appspot.com",
+    messagingSenderId: "1091209171765",
+    appId: "1:1091209171765:web:41e90c01de08f8145c727c",
+    measurementId: "G-CXKWN2LFBJ"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+var a;
+var b;
+var c;
+var d;
+var e;
+
+  firebase.database().ref('KUTHUVILAKU').on('value',(snap)=>{
+a=snap.child("A").val() ;
+b=snap.child("B").val() ;
+
+c=snap.child("CI/C").val();
+d=snap.child("D").val() ;
+e=snap.child("E").val() ;
+check();
+  });
+
+  function check(){
+    if(a=="1"){
+document.getElementById('as').style.display="none";
+document.getElementById('As').style.display="block";
+    }else{
+      document.getElementById('As').style.display="none";
+document.getElementById('as').style.display="block";
+    }
+    if(b=="1"){
+      document.getElementById('bs').style.display="none";
+document.getElementById('Bs').style.display="block";
+    }else{
+      document.getElementById('Bs').style.display="none";
+document.getElementById('bs').style.display="block";
+    }
+    if(c=="1"){
+      document.getElementById('cs').style.display="none";
+document.getElementById('Cs').style.display="block";
+    }else{
+      document.getElementById('Cs').style.display="none";
+document.getElementById('cs').style.display="block";
+    }
+    if(d=="1"){
+      document.getElementById('ds').style.display="none";
+document.getElementById('Ds').style.display="block";
+    }else{
+      document.getElementById('Ds').style.display="none";
+document.getElementById('ds').style.display="block";
+    }
+    if(e=="1"){
+      
+    }else{
+
+    }
+  }
+</script>
+</body>
+
+</html>
